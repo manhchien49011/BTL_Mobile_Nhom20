@@ -21,32 +21,61 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailError"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:paddingStart="8dp"
-            android:singleLine="true"
+            android:layout_marginTop="5dp"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+            app:startIconTint="#6200EE"
 
-            />
+            >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passError"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:paddingStart="5dp"
-            android:singleLine="true"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:passwordToggleEnabled="true"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+            app:startIconTint="#6200EE">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true"
 
 
-            />
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/login"
