@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResignationLetterActivity"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+                <ImageView
+
+                    android:id="@+id/btnBackPressed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_left_30"
+                    android:layout_marginRight="10dp"
+                    android:padding="3dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Báo nghỉ / đi muộn"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="QUẢN LÝ"
+        android:textColor="@color/green_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNameLeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewTypeLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Loại đơn"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuTypeLetters"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:hint="Chọn loại đơn"
+        android:textColorHint="@android:color/darker_gray"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:placeholderTextColor="@android:color/darker_gray"
+        tools:ignore="MissingConstraints">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewTypeLetter"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:inputType="none"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxStrokeColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textViewTimeLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:text="Thời gian áp dụng đơn"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuTimeLetter"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:hint="Chọn thời gian"
+        android:textColorHint="@android:color/darker_gray"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:placeholderTextColor="@android:color/darker_gray"
+        tools:ignore="MissingConstraints">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewTimeLetter"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:inputType="none"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxStrokeColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <View
+        android:id="@+id/view"
+        style="@style/Divider"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textViewReasonLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Lý do"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldReason"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:hint="Nhập lý do"
+        app:hintTextColor="@android:color/darker_gray"
+       >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/textInputEditTextReasonLetter"
+            android:gravity="top"
+            android:inputType="text|textMultiLine"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="380dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+   <Button
+       android:id="@+id/buttonSubmitLetter"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:text="Gửi yêu cầu"/>
+
+
+
+</LinearLayout>

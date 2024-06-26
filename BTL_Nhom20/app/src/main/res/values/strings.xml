@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Checkin</string>
+
+    <string name="title_home">Trang chủ</string>
+    <string name="title_project">Dự án</string>
+    <string name="title_workplace">Workplace</string>
+    <string name="bottom_nav_account">Tài Khoản</string>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_new">Click here for register</string>
+    <string name="not_register">Not Register?</string>
+    <string name="name">Name</string>
+    <string name="welcome">Welcome</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="register">Register</string>
+    <string name="name_error">Please enter your name</string>
+    <string name="name_exist">This name does not exist</string>
+    <string name="email_exist">This email does not exist</string>
+    <string name="employee_exist">This employee already exist</string>
+
+    <string name="phone_error">Please enter your phone number</string>
+    <string name="email_error">Please enter your email address</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="password_error">Please enter a password</string>
+    <string name="error_invalid_password">Please enter a minimum password of 6 characters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="acc_info">Thông tin tài khoản</string>
+    <string name="acc_update">Cập nhật thông tin</string>
+    <string name="signout">Đăng xuất</string>
+    <string name="acc_str">Tài khoản</string>
+    <string name="acc_help">Cài đặt và trợ giúp</string>
+    <string name="setting">Cài đặt</string>
+    <string name="market">Chợ</string>
+    <string name="device">Thiết bị</string>
+    <string name="add">Thêm</string>
+    <string name="no_attendance">Bạn chưa checkin ngày hôm nay.</string>
+
+</resources>

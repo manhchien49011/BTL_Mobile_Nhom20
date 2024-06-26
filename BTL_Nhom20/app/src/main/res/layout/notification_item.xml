@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/item_notification"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/notificationActive"
+    android:paddingLeft="10dp"
+    android:paddingTop = "10dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_emailSender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dung@gmail.com : "
+                android:textSize="18sp"
+                android:textColor="@color/green_4"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian gửi"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" mời bạn tham gia workspace có id : 3214"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_option"
+        android:visibility="visible"
+        >
+       <LinearLayout
+           android:id="@+id/btnAccept"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_check_circle_24"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Tham gia"
+               android:layout_marginRight="50dp"
+               android:textSize="18sp"
+               android:textColor="@color/black"
+               />
+       </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnRefuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_highlight_off_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Từ chối"
+                android:layout_marginRight="50dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_4"
+            android:text="Bạn đã tham gia workspace này"
+            android:layout_marginRight="50dp"
+            style="18sp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tv_refuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error"
+            android:text="Bạn đã từ chối tham gia"
+            android:layout_marginRight="50dp"
+            style="18sp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="10dp"
+
+
+        />
+</LinearLayout>

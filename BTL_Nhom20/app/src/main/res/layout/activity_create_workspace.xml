@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Create_workspace"
+android:background="@color/background_color"
+    >
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/circle_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/circle" />
+<ImageView
+    android:id="@+id/back_workspace"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    android:src="@drawable/ic_baseline_arrow_back_24"
+
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="65dp"
+        android:text="Tạo Workspace"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="491dp"
+        android:layout_below="@+id/circle_top"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-61dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="Tên thành phố"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingRight="10px"
+            android:singleLine="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameCompanyError"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent">
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="Tên công ty"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailError"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="Địa chỉ Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_workspaceError"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxBackgroundColor="?attr/colorOnPrimary"
+            app:endIconMode="custom"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent">
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_workspace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="Tên workspace của bạn"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/CreateWorkspace"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Đăng ký"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
