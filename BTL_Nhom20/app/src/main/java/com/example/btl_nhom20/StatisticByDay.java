@@ -30,8 +30,6 @@ public class StatisticByDay extends AppCompatActivity {
     private ImageView imgBackActivity;
     private CardView workOnTime,offWork,lateForWork;
     private int idWsp;
-   // private FirebaseDatabase database;
-   // private DatabaseReference reference;
     private List<User> mListWorkOnTime;
     private List<User> mListLateForWork;
     private List<User> mListOffWork;
@@ -90,7 +88,7 @@ public class StatisticByDay extends AppCompatActivity {
                 }
                 else if(model.getType().equals("LateForWork")){
                     demLateForWork++;
-                }
+                }else{demOffWork++;}
             }
         }
 
@@ -102,7 +100,8 @@ public class StatisticByDay extends AppCompatActivity {
         String tv2 = "Có "+String.valueOf(demLateForWork)+" người đi làm muộn";
         tv_lateForWork.setText(tv2);
 
-        String tv3 = "Có "+dem+" người chưa checkin";
+//        String tv3 = "Có "+dem+" người chưa checkin";
+        String tv3 = "Có "+String.valueOf(demOffWork)+" người chưa checkin";
         tv_offWork.setText(tv3);
 
 

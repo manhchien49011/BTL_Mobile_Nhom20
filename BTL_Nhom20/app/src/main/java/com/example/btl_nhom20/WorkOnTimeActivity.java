@@ -102,8 +102,7 @@ public class WorkOnTimeActivity extends AppCompatActivity {
             }
         }
         mWorkOnTimeAdapter.notifyDataSetChanged();
-//        database = FirebaseDatabase.getInstance();
-//        reference = database.getReference();
+
 //        reference.child("Calendar").child(String.valueOf(idWsp)).child(String.valueOf(year)).child(String.valueOf(month+1))
 //                .child(String.valueOf(day)).child("WorkOnTime").addValueEventListener(new ValueEventListener() {
 //            @Override

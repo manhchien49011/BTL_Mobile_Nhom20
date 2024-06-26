@@ -29,8 +29,6 @@ public class OffWorkActivity extends AppCompatActivity {
     private EmployeeAdapter mOffWorkAdapter;
     private ImageView btnBack;
 
-   // private FirebaseDatabase database;
-    //private DatabaseReference reference;
     private List<User> mListOffWork;
     private int idWsp;
     private TextView tv_dateNow,tv_amount;

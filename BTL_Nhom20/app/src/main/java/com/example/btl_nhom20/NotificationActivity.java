@@ -60,27 +60,5 @@ public class NotificationActivity extends AppCompatActivity {
         mListNotification.addAll(reponsitoryNotification.getByReceiverId(Integer.parseInt(uid)));
         mNotificationAdapter.notifyDataSetChanged();
 
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference();
-//        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-//        reference.child("Users").child(uid).child("Messages").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                if(mListNotification != null){
-//                    mListNotification.clear();
-//                }
-//                for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
-//                    Notification notification = dataSnapshot.getValue(Notification.class);
-//                    mListNotification.add(notification);
-//                }
-//                mNotificationAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(getApplicationContext(),"Get list notification fail",Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 }

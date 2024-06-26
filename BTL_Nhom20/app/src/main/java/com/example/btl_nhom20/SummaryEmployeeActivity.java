@@ -137,35 +137,6 @@ public class SummaryEmployeeActivity extends AppCompatActivity {
         }
         tv_numberOfWork.setText(String.valueOf(diffDays));
 
-//        reference.child("Workspaces").child(String.valueOf(idWsp))
-//                .child("Employees").child(uid).child("dateOfEmployment").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @RequiresApi(api = Build.VERSION_CODES.O)
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                  if(task.isSuccessful()){
-//                      String dateOfWork;
-//                      String dateOfEmployment = "Ngày vào làm : "+task.getResult().getValue().toString();
-//                      tv_dateOfEmployment.setText(dateOfEmployment);
-//                      String[] separated = task.getResult().getValue().toString().split("/");
-//                      arrDate = new String[]{separated[0],separated[1],separated[2]};
-//                      if(separated[1].length()==1){
-//                          dateOfWork = separated[2]+"-0"+separated[1]+"-"+separated[0];
-//                      }
-//                      else{
-//                          dateOfWork = separated[2]+"-"+separated[1]+"-"+separated[0];
-//                      }
-//                      LocalDate d1 = LocalDate.parse(dateOfWork, DateTimeFormatter.ISO_LOCAL_DATE);
-//                      LocalDate d2 = LocalDate.parse(date, DateTimeFormatter.ISO_LOCAL_DATE);
-//                      Duration diff = Duration.between(d1.atStartOfDay(), d2.atStartOfDay());
-//                      diffDays = diff.toDays();
-//                      if(String.valueOf(diffDays).equals("0")){
-//                          diffDays = 1;
-//                      }
-//                      tv_numberOfWork.setText(String.valueOf(diffDays));
-//                  }
-//            }
-//        });
-
 
 
         new Handler().postDelayed(new Runnable() {
@@ -226,28 +197,6 @@ public class SummaryEmployeeActivity extends AppCompatActivity {
              }
              CountWorkOnTimeAndLateForWork(j,day[i-1],i);
          }
-//        reference.child("Workspaces").child(String.valueOf(idWsp))
-//                .child("Employees").child(uid).child("dateOfEmployment")
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        String[] separated = snapshot.getValue().toString().split("/");
-//
-//                        for(int i = Integer.valueOf( separated[1]);i<=(month+1);i++){
-//                            int j = 1;
-//
-//                            if(String.valueOf(i).equals(separated[1])){
-//                                j = Integer.parseInt(separated[0]);
-//                            }
-//                            CountWorkOnTimeAndLateForWork(j,day[i-1],i);
-//                        }
-//                    }
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-
 
 
     }
@@ -271,47 +220,6 @@ public class SummaryEmployeeActivity extends AppCompatActivity {
                     }
                 }
             }
-//            reference.child("Calendar").child(String.valueOf(idWsp)).child(String.valueOf(year))
-//                    .child(String.valueOf(finalI))
-//                    .child(String.valueOf(finalJ)).child("WorkOnTime")
-//                    .addValueEventListener(new ValueEventListener() {
-//                        @Override
-//                        public synchronized void onDataChange(@NonNull DataSnapshot snapshot) {
-//                            for (DataSnapshot data : snapshot.getChildren()){
-//                                User user = data.getValue(User.class);
-//
-//                                if(uid.equals(user.getUid())){
-//                                    arrWorkOnTime[finalI-1] +=1;
-//                                    break;
-//                                }
-//                            }
-//                        }
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError error) {
-//
-//                        }
-//                    });
-//            reference.child("Calendar").child(String.valueOf(idWsp)).child(String.valueOf(year))
-//                    .child(String.valueOf(finalI))
-//                    .child(String.valueOf(finalJ)).child("LateForWork")
-//                    .addValueEventListener(new ValueEventListener() {
-//                        @Override
-//                        public synchronized void onDataChange(@NonNull DataSnapshot snapshot) {
-//                            for (DataSnapshot data : snapshot.getChildren()){
-//                                User user = data.getValue(User.class);
-//                                if(uid.equals(user.getUid())){
-//                                    arrlateForWork[finalI-1] +=1;
-//                                    break;
-//                                }
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError error) {
-//
-//                        }
-//                    });
-
         }
     }
 }

@@ -33,13 +33,13 @@ public class Create_workspace extends AppCompatActivity {
     AutoCompleteTextView autocomplete;
     ProgressBar progressBar;
     private int idWorkspace = 0;
-    private static final String[] PROVINCES = { "An Giang", "Bà rịa – Vũng tàu", "Bắc Giang", "Bắc Kạn",
-            "Bạc Liêu", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận",
-            "Cà Mau" , "Cần Thơ" , "Cao Bằng" , "Đà Nẵng" , "Điện Biên" , "Hà Giang" , "Hà Nam" ,
-            "Hà Nội", "Hà Tĩnh" , "Hải Dương" , "Hải Phòng" , "Hậu Giang" , "Hòa Bình" , "Hưng Yên" ,
-            "Lạng Sơn" , "Nam Định" , "Nghệ An" , "Ninh Bình" , "Quảng Bình" , "Quảng Ninh" ,
-            "Quảng Trị" , "Sơn La" , "Tây Ninh" , "Thái Bình" , "Thái Nguyên" , "Thanh Hóa" , "Thừa Thiên Huế" ,
-            "Tiền Giang" , "Thành phố Hồ Chí Minh" , "Trà Vinh" , "Tuyên Quang" , "Vĩnh Long" , "Vĩnh Phúc", "Yên Bái"};
+    private static final String[] PROVINCES = { "An Giang", "Ba ria - Vung Tau", "Bac Giang", "Bac Kan",
+            "Bac Lieu", "Bac Ninh", "Ben Tre", "Binh Đinh", "Binh Dương", "Binh Phuoc", "Binh Thuan",
+            "Ca Mau" , "Can Tho" , "Cao Bang" , "Đa Nang" , "Đien Bien" , "Ha Giang" , "Ha Nam" ,
+            "Ha Noi", "Ha Tinh" , "Hai Duong" , "Hai Phong" , "Hau Giang" , "Hoa Binh" , "Hung Yen" ,
+            "Lang Son" , "Nam Đinh" , "Nghe An" , "Ninh Binh" , "Quang Binh" , "Quang Ninh" ,
+            "Quang Tri" , "Son La" , "Tay Ninh" , "Thai Binh" , "Thai Nguyen" , "Thanh Hoa" , "Thua Thien Hue" ,
+            "Tien Giang" , "Thanh pho Ho Chi Minh" , "Tra Vinh" , "Tuyen Quang" , "Vinh Long" , "Vinh Phuc", "Yen Bai"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

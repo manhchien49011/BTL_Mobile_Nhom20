@@ -73,24 +73,6 @@ public class AddEmployees extends AppCompatActivity {
             strEmail.add(u.getEmail());
         }
 
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference();
-
-//        reference.child("Users").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                strEmail.clear();
-//                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-//                    User user = dataSnapshot.getValue(User.class);
-//                    strEmail.add(user.getEmail());
-//                    users.add(user);
-//                }
-//            }
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                // show error when calling api failed
-//            }
-//        });
 
         //get User belong to workspace
         List<ModelCalendar> calendars = reponsityCalendar.getByWorkspace(idWsp);
@@ -98,23 +80,7 @@ public class AddEmployees extends AppCompatActivity {
             User user = reponsityUser.getById(calendar.getUser_Id());
             strEmailEmployee.add(user.getEmail());
         }
-//        reference.child("Workspaces").child(String.valueOf(idWsp)).child("Employees")
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        strEmailEmployee.clear();
-//                        for(DataSnapshot data : snapshot.getChildren()){
-//                            User user = data.getValue(User.class);
-//                            strEmailEmployee.add(user.getEmail());
-//                        }
-//
-//
-//                    }
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
+
         ArrayAdapter<String> adapterEmail = new ArrayAdapter<String>
                 (this,android.R.layout.select_dialog_item, strEmail);
         email.setThreshold(2);
@@ -170,33 +136,7 @@ public class AddEmployees extends AppCompatActivity {
                                 alertDialog.show();
                             }
                     }
-//                        FirebaseDatabase database1 = FirebaseDatabase.getInstance();
-//                        DatabaseReference reference1 = database1.getReference();
-//                        reference1.child("Users").child(uidReceiver).child("Messages").child(String.valueOf(idNotification)).setValue(notification, new DatabaseReference.CompletionListener() {
-//                            @Override
-//                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-//                                progressBar.setVisibility(View.GONE);
-//                                Toast.makeText(getApplicationContext(),"Đã mời thành công !!!",Toast.LENGTH_SHORT).show();
-//                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(AddEmployees.this);
-//                                alertDialog.setTitle("Thông báo");
-//                                alertDialog.setIcon(R.drawable.logo);
-//                                alertDialog.setMessage("Mời thành công. Bạn có muốn tiếp tục mời nhân viên ??");
-//
-//                                alertDialog.setNegativeButton("Có", new DialogInterface.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(DialogInterface dialog, int which) {
-//                                        email.setText("",false);
-//                                    }
-//                                });
-//                                alertDialog.setPositiveButton("Không", new DialogInterface.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(DialogInterface dialog, int which) {
-//                                       finish();
-//                                    }
-//                                });
-//                                alertDialog.show();
-//                            }
-//                        });
+
                     }
                 }
             }

@@ -37,6 +37,6 @@
     <string name="market">Chợ</string>
     <string name="device">Thiết bị</string>
     <string name="add">Thêm</string>
-    <string name="no_attendance">Bạn chưa checkin ngày hôm nay.</string>
+    <string name="no_attendance">Checkin chưa.</string>
 
 </resources>

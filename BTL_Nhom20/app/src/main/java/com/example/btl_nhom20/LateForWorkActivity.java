@@ -28,8 +28,7 @@ public class LateForWorkActivity extends AppCompatActivity {
     private EmployeeAdapter mLateForWorkAdapter;
     private ImageView btnBack;
 
-//  private FirebaseDatabase database;//
-//  private DatabaseReference reference;
+
     private List<User> mListLateForWork;
     private TextView tv_dateNow,tv_amount;
     private int idWsp;
@@ -98,25 +97,7 @@ public class LateForWorkActivity extends AppCompatActivity {
             }
         }
         mLateForWorkAdapter.notifyDataSetChanged();
-//        database = FirebaseDatabase.getInstance();
-//        reference = database.getReference();
-//        reference.child("Calendar").child(String.valueOf(idWsp)).child(String.valueOf(year)).child(String.valueOf(month+1))
-//                .child(String.valueOf(day)).child("LateForWork").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                mListLateForWork.clear();
-//                for (DataSnapshot data : snapshot.getChildren()){
-//                    User user = data.getValue(User.class);
-//                    mListLateForWork.add(user);
-//                }
-//                mLateForWorkAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                // show error when calling api failed
-//            }
-//        });
+
     }
 
 }

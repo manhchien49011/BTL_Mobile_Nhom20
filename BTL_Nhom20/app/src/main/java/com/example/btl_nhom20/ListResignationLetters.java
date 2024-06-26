@@ -18,9 +18,6 @@ import java.util.ArrayList;
 
 public class ListResignationLetters extends AppCompatActivity {
     ReponsitoryLetter reponsitoryLetter;
-    // variables for features
-   // private FirebaseDatabase database;
-   // private DatabaseReference reference;
     private ArrayList<Letter> listResignationLettersFromDatabase;
     private int workspaceId;
 
@@ -71,30 +68,11 @@ public class ListResignationLetters extends AppCompatActivity {
 
 
     private void getListResignationLettersFromFirebase() {
-//        database = FirebaseDatabase.getInstance();
-//        reference = database.getReference();
 
         listResignationLettersFromDatabase.addAll(reponsitoryLetter.getByWorkspacesId(workspaceId));
         resignationLettersAdapter.notifyDataSetChanged();
 
-//        reference.child("Letters").child(String.valueOf(workspaceId)).addValueEventListener(new ValueEventListener() {
-//
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                listResignationLettersFromDatabase.clear();
-//                for (DataSnapshot data : snapshot.getChildren()){
-//                    Letter letter = data.getValue(Letter.class);
-//                    listResignationLettersFromDatabase.add(letter);
-//                }
-//
-//                resignationLettersAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) { // if error
-//                Toast.makeText(getApplicationContext(),"Get list resignation letters from firebase is fail",Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
 
     }
 }

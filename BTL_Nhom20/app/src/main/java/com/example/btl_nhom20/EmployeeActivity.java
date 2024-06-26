@@ -32,8 +32,7 @@ public class EmployeeActivity extends AppCompatActivity {
     private ImageView btnBack;
     private TextView tv_nameWorkspace,tv_emailWorkspace;
     private int idWsp;
-   // private FirebaseDatabase database ;
-    //private DatabaseReference reference ;
+
     private String uId;
 
     @Override
@@ -68,31 +67,7 @@ public class EmployeeActivity extends AppCompatActivity {
 
         getListEmployee();
 
-        //xíu comment nha
-//        database = FirebaseDatabase.getInstance();
-//        reference = database.getReference();
-//        reference.child("Workspaces").child(String.valueOf(idWsp)).child("admin").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//
-//                reference.child("Users").child((String) task.getResult().getValue()).child("email").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                        if(task.isSuccessful()){
-//                            tv_emailWorkspace.setText(String.valueOf(task.getResult().getValue()));
-//                        }
-//                    }
-//                });
-//                reference.child("Users").child((String) task.getResult().getValue()).child("username").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                        if(task.isSuccessful()){
-//                            tv_nameWorkspace.setText(String.valueOf(task.getResult().getValue()));
-//                        }
-//                    }
-//                });
-//            }
-//        });
+
 
 
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -111,28 +86,7 @@ public class EmployeeActivity extends AppCompatActivity {
             mListUsers.add(reponsityUser.getById(model.getUser_Id()));
         }
         mEmployeeAdapter.notifyDataSetChanged();
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference();
-////        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-//
-//        reference.child("Workspaces").child(String.valueOf(idWsp)).child("Employees").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                if(mListUsers != null){
-//                    mListUsers.clear();
-//                }
-//                for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
-//                    User user = dataSnapshot.getValue(User.class);
-//                    mListUsers.add(user);
-//                }
-//                mEmployeeAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(getApplicationContext(),"Get list employees fail",Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
     }
     @Override
     protected void onSaveInstanceState (@NonNull Bundle outState){

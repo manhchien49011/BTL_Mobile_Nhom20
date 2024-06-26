@@ -109,12 +109,12 @@ public class HomeWorkspaceFragment extends Fragment {
 
         tv_name_workspace.setText(mWorkspaceActivityAdmin.getName());
         tv_email_workspace.setText(mWorkspaceActivityAdmin.getEmail());
-//        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         uid = MySharedPreferences.getInstance(getContext()).getString("User_Id");
         showCheckIn();
 
 
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
         if(uid.equals(mWorkspaceActivityAdmin.getUserIdAdmin())){
             single_newspaper.setVisibility(View.GONE);
 
@@ -122,9 +122,9 @@ public class HomeWorkspaceFragment extends Fragment {
                 @Override
                 public void run() {
                     noCheckIn.setVisibility(View.GONE);
-                    progressBar.setVisibility(View.GONE);
+//                    progressBar.setVisibility(View.GONE);
                 }
-            },500);
+            },50000);
         }
         else {
             if(hour < 8 || hour > 17 ){
@@ -132,9 +132,9 @@ public class HomeWorkspaceFragment extends Fragment {
                 @Override
                 public void run() {
                     noCheckIn.setVisibility(View.GONE);
-                    progressBar.setVisibility(View.GONE);
+//                    progressBar.setVisibility(View.GONE);
                 }
-            },500);
+            },5000);
             }
             cv_administrator.setVisibility(View.GONE);
             browse_app.setVisibility(View.GONE);
@@ -264,13 +264,13 @@ public class HomeWorkspaceFragment extends Fragment {
     private void CheckIn(){
         User user = mReponsityUser.getById(Integer.parseInt(uid));
 
-        if( (hour == 8 && minute <= 15)){
+        if( (hour == 8 && minute <= 30)){
             WorkOnTime(user);
-            Toast.makeText(getContext(),"Bạn đã checkIn thành công",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(),"Bạn đã checkin thành công",Toast.LENGTH_SHORT).show();
         }
         else{
             LateForWork(user);
-            Toast.makeText(getContext(),"Bạn đã checkIn thành công",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(),"Bạn đã checkin thành công",Toast.LENGTH_SHORT).show();
         }
 
         //Lấy ra danh sách user thuộc workspace
@@ -289,33 +289,7 @@ public class HomeWorkspaceFragment extends Fragment {
 //                break;
 //            }
 //        }
-//        database = FirebaseDatabase.getInstance();
-//        reference = database.getReference();
-//        reference.child("Workspaces").child(String.valueOf(mWorkspaceActivityAdmin.getIdWsp())).child("Employees")
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        for(DataSnapshot data : snapshot.getChildren()){
-//                            User user = data.getValue(User.class);
-//                            if(String.valueOf(user.getUid()).equals(uid) ){
-//                                if( (hour == 8 && minute <= 15)){
-//                                    WorkOnTime(user);
-//                                    Toast.makeText(getContext(),"Bạn đã checkIn thành công",Toast.LENGTH_SHORT).show();
-//                                }
-//                                else{
-//                                    LateForWork(user);
-//                                    Toast.makeText(getContext(),"Bạn đã checkIn thành công",Toast.LENGTH_SHORT).show();
-//                                }
-//                                break;
-//                            }
-//                        }
-//                    }
 //
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//                        // show error when calling api failed
-//                    }
-//                });
 
     }
 
@@ -326,10 +300,10 @@ public class HomeWorkspaceFragment extends Fragment {
         for (ModelCalendar model : modelCalendars){
             if(model.getYear()==year && model.getMonth()==month+1 && model.getDay()==day){
                 if(model.getType().isEmpty()){
-                    noCheckIn.setVisibility(View.VISIBLE);
+                    noCheckIn.setVisibility(View.GONE);
                 }
                 else{
-                   noCheckIn.setVisibility(View.GONE);
+                   noCheckIn.setVisibility(View.VISIBLE);
                 }
                 return;
             }
@@ -343,7 +317,7 @@ public class HomeWorkspaceFragment extends Fragment {
                 year, month+1, day, hour, minute, "WorkOnTime");
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month+1, year));
         if(reponsityCalendar.update(calendar)){
-            Toast.makeText(getActivity(), "Chào mừng đến với buổi CheckIn đầu tiên", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Bạn đã checkin thành công", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);
@@ -356,7 +330,7 @@ public class HomeWorkspaceFragment extends Fragment {
                 month + 1, day, hour, minute, "LateForWork");
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month + 1, year));
         if(reponsityCalendar.update(calendar)){
-            Toast.makeText(getActivity(), "Chào mừng đến với buổi CheckIn đầu tiên", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Bạn đã checkin muộn rồi", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);

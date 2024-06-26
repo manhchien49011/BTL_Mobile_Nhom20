@@ -27,8 +27,6 @@ public class login extends AppCompatActivity {
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passError;
     ProgressBar progressBar;
-    //Khai báo một phiên bản của FirebaseAuth.
-//    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
