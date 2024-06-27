@@ -134,7 +134,7 @@ public class HomeWorkspaceFragment extends Fragment {
                     noCheckIn.setVisibility(View.GONE);
 //                    progressBar.setVisibility(View.GONE);
                 }
-            },5000);
+            },50000);
             }
             cv_administrator.setVisibility(View.GONE);
             browse_app.setVisibility(View.GONE);
@@ -270,7 +270,7 @@ public class HomeWorkspaceFragment extends Fragment {
         }
         else{
             LateForWork(user);
-            Toast.makeText(getContext(),"Bạn đã checkin thành công",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(),"Bạn đã checkin muộn rồi",Toast.LENGTH_SHORT).show();
         }
 
         //Lấy ra danh sách user thuộc workspace

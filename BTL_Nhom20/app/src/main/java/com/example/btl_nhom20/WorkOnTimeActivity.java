@@ -29,8 +29,7 @@ public class WorkOnTimeActivity extends AppCompatActivity {
     private EmployeeAdapter mWorkOnTimeAdapter;
     private ImageView btnBack;
     private TextView tv_dateNow,tv_amount;
-   // private FirebaseDatabase database;
-    //private DatabaseReference reference;
+
     private List<User> mListWorkOnTime;
     private int idWsp;
     private int year;

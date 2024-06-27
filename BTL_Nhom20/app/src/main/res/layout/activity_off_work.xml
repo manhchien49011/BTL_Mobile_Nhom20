@@ -48,7 +48,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:textSize="16sp"
-               android:text="19/06/2022"
+               android:text="19/06/2024"
                android:textColor="@color/black"
 
                />
