@@ -88,7 +88,8 @@ public class StatisticByDay extends AppCompatActivity {
                 }
                 else if(model.getType().equals("LateForWork")){
                     demLateForWork++;
-                }else{demOffWork++;}
+                }
+//                else{demOffWork++;}
             }
         }
 
@@ -100,8 +101,8 @@ public class StatisticByDay extends AppCompatActivity {
         String tv2 = "Có "+String.valueOf(demLateForWork)+" người đi làm muộn";
         tv_lateForWork.setText(tv2);
 
-//        String tv3 = "Có "+dem+" người chưa checkin";
-        String tv3 = "Có "+String.valueOf(demOffWork)+" người chưa checkin";
+        String tv3 = "Có "+dem+" người chưa checkin";
+//        String tv3 = "Có "+String.valueOf(demOffWork)+" người chưa checkin";
         tv_offWork.setText(tv3);
 
 

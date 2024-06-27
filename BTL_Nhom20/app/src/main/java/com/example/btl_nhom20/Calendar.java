@@ -1,6 +1,7 @@
 package com.example.btl_nhom20;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.CalendarView;
@@ -135,6 +136,7 @@ public class Calendar extends AppCompatActivity {
     }
 
 
+
     private void CheckIn(){
 
         for(ModelCalendar calendar : listUserAndWsp){
@@ -157,6 +159,7 @@ public class Calendar extends AppCompatActivity {
         if(selectDay != day || selectMonth != month || selectYear != year){
             if(selectDay > day){
                 Toast.makeText(getBaseContext(), "Chưa đến ngày Checkin", Toast.LENGTH_SHORT).show();
+
             }else if (selectDay < day){
                 Toast.makeText(getBaseContext(), "Qua ngày checkin rồi", Toast.LENGTH_SHORT).show();
             }
@@ -167,6 +170,8 @@ public class Calendar extends AppCompatActivity {
         }else{ Toast.makeText(getBaseContext(), "Checkin đi", Toast.LENGTH_SHORT).show();
             for (ModelCalendar model : listUserAndWsp){
                 if(model.getDay() == day && model.getMonth() == month + 1 && model.getYear() == year){
+
+
                     if(model.getType().equals("WorkOnTime")){
                         if(day == selectDay && year == selectYear && month == selectMonth){
                             checked.setVisibility(View.VISIBLE);
@@ -189,12 +194,15 @@ public class Calendar extends AppCompatActivity {
                         }else{noCheckIn.setVisibility(View.VISIBLE);
                             checked.setVisibility(View.GONE);
                             overtime.setVisibility(View.GONE);}
+
 //                        else if(hour >= 5  && hour <=17){
 //                            noCheckIn.setVisibility(View.VISIBLE);
 //                            checked.setVisibility(View.GONE);
 //                            overtime.setVisibility(View.GONE);
 //                        }
                     }
+
+
                     else{
                         noCheckIn.setVisibility(View.GONE);
                         checked.setVisibility(View.GONE);
