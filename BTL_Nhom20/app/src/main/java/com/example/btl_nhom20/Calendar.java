@@ -259,7 +259,7 @@ public class Calendar extends AppCompatActivity {
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month+1, year));
         if(reponsityCalendar.update(calendar)){
 
-            Toast.makeText(getBaseContext(), "Bạn đã checkin thành công", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Bạn đã checkin thêm lần nữa thành công", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);
@@ -272,7 +272,7 @@ public class Calendar extends AppCompatActivity {
                 year, month+1, day, hour, minute, "LateForWork");
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month+1, year));
         if(reponsityCalendar.update(calendar)){
-            Toast.makeText(getBaseContext(), "Bạn checkin muộn rồi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Bạn checkin thêm lần nữa rồi", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);

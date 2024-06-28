@@ -317,7 +317,7 @@ public class HomeWorkspaceFragment extends Fragment {
                 year, month+1, day, hour, minute, "WorkOnTime");
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month+1, year));
         if(reponsityCalendar.update(calendar)){
-            Toast.makeText(getActivity(), "Bạn đã checkin thành công", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Bạn đã checkin thêm lần nữa thành công", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);
@@ -330,7 +330,7 @@ public class HomeWorkspaceFragment extends Fragment {
                 month + 1, day, hour, minute, "LateForWork");
         calendar.setDateOfEmployment(String.format("%d/%d/%d", day, month + 1, year));
         if(reponsityCalendar.update(calendar)){
-            Toast.makeText(getActivity(), "Bạn đã checkin muộn rồi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Bạn đã checkin thêm lần nữa rồi", Toast.LENGTH_SHORT).show();
         }
         else{
             reponsityCalendar.insert(calendar);

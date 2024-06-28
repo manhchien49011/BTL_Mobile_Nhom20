@@ -46,7 +46,7 @@ public class ResignationLettersAdapter extends RecyclerView.Adapter<ResignationL
         String reasonResignation = setTextTypeOfLetterForView(letter.getTypeOfLetter());
 
         // split date
-        // Example: 11/03/2001 -> ['11', '03', '2001']
+        // Example: 04/09/2001 -> ['04', '09', '2001']
         String[] date = letter.getTimeOfLetter().split("/");
         String day = date[0];
         String month = date[1];

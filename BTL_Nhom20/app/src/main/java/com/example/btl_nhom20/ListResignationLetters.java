@@ -56,7 +56,7 @@ public class ListResignationLetters extends AppCompatActivity {
         recyclerViewListResignationLetters.setAdapter(resignationLettersAdapter);
 
         // processing
-        getListResignationLettersFromFirebase();
+        getListResignationLettersFromDatabase();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +67,7 @@ public class ListResignationLetters extends AppCompatActivity {
     }
 
 
-    private void getListResignationLettersFromFirebase() {
+    private void getListResignationLettersFromDatabase() {
 
         listResignationLettersFromDatabase.addAll(reponsitoryLetter.getByWorkspacesId(workspaceId));
         resignationLettersAdapter.notifyDataSetChanged();

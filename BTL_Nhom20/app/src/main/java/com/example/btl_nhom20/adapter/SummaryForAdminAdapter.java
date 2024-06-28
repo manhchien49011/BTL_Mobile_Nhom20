@@ -54,7 +54,7 @@ public class SummaryForAdminAdapter extends RecyclerView.Adapter<SummaryForAdmin
         public SummaryEmploymentViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewMonthSummaryAdmin = itemView.findViewById(R.id.textViewMonthSummaryAdmin);
-            itemUserByMonth                                 = itemView.findViewById(R.id.itemUserByMonthAdmin);
+            itemUserByMonth = itemView.findViewById(R.id.itemUserByMonthAdmin);
         }
     }
 }
